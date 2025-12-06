@@ -1,14 +1,32 @@
 // Script para inicializar AOS
-AOS.init();
+// Solo inicializar AOS en dispositivos desktop
+const isMobile = () => window.innerWidth <= 768;
+
+if (!isMobile()) {
+    AOS.init();
+} else {
+    // En mobile, desactivar AOS y mostrar elementos sin animación
+    AOS.init({ disable: true });
+}
+
+// Detectar cambios de orientación/resize en mobile
+window.addEventListener('orientationchange', () => {
+    if (isMobile() && !AOS.getState().disabled) {
+        AOS.disable();
+    } else if (!isMobile() && AOS.getState().disabled) {
+        AOS.enable();
+        AOS.refreshHard();
+    }
+});
 
 document.addEventListener('DOMContentLoaded', function () {
 
     // CÓDIGO PARA TYPED.JS
     var typedOptions = {
         strings: [
-            'Desarrollador de Software.',
-            'Líder de Equipos de Innovación.',
-            'Apasionado por la Tecnología.'
+            'Software Developer.',
+            'Innovation Team Leader',
+            'Passionate about Technology.'
         ],
         typeSpeed: 50,
         backSpeed: 25,
