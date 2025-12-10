@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 15 23 42;
+    /* #0f172a converted to RGB space if using with opacity opacity utils, or just hex */
+  }
+}
+
+/* Custom styles that were in main.css but not covered by tailwind config yet, if any */
+/* Actually, we mapped everything to components, so we just need the variables if we use them globally, 
+   but better to put them in tailwind.config.js theme */
+
+body {
+  @apply bg-dark text-text font-sans antialiased;
+  overflow-x: hidden;
+}
