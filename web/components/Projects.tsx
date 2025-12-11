@@ -159,36 +159,6 @@ export default function Projects() {
         ]
     },
     {
-        id: "altoke",
-        title: "Altoke Technical Service",
-        img: "/img/altoke.jpg",
-        shortDesc: "Designing the digital transformation of Altoke Technical Service, creating a scalable web platform with future e-commerce vision.",
-        subtitle: "Altoke Technical Service – Website",
-        desc: "Design and development of a modern web platform for digital transformation of a technical service, with the goal of expanding its reach and evolving toward a future online store.",
-        fullDesc: (
-            <>
-                <hr className="my-6 border-primary/20" />
-                <p className="mb-3 text-text"><strong>The Challenge:</strong> A successful local technical service lacked a professional digital presence, limiting its reach and ability to compete in the online market.</p>
-                <p className="mb-6 text-text-muted"><strong>My Role:</strong> As co-founder of this venture with my partner in Jujuy, I act as Project Leader and Strategic Consultant. My mission is to guide the digital transformation of our own technical service.</p>
-
-                <p className="font-bold mb-3 text-primary/90 uppercase tracking-widest text-xs">Technologies Proposed</p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">PHP</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-sky-500/10 text-sky-400 border border-sky-500/20">SQL</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">JavaScript</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Bootstrap</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-orange-500/10 text-orange-400 border border-orange-500/20">HTML5</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">CSS3</span>
-                </div>
-
-                <p className="text-text-muted leading-relaxed"><strong>The Impact:</strong> The result will be a new and powerful digital embassy for our brand, positioning it to capture a new market segment and ensure its growth in the digital era.</p>
-            </>
-        ),
-        links: [
-            { label: "More Details", modalBtn: true }
-        ]
-    },
-    {
         id: "runafit",
         title: "RunaFit",
         img: "/img/runafit.png",
@@ -197,6 +167,21 @@ export default function Projects() {
         desc: "Complete booking and payment management system for Pilates and fitness studios, designed for accessibility and automation.",
         fullDesc: (
             <>
+                <div className="grid grid-cols-3 gap-2 mb-6">
+                    <div className="bg-dark/50 p-3 rounded-xl border border-primary/20 text-center">
+                        <span className="block text-2xl font-bold text-white">6</span>
+                        <span className="text-xs text-text-muted uppercase tracking-wider">Clients</span>
+                    </div>
+                    <div className="bg-dark/50 p-3 rounded-xl border border-primary/20 text-center">
+                        <span className="block text-2xl font-bold text-green-400">$150k</span>
+                        <span className="text-xs text-text-muted uppercase tracking-wider">MRR</span>
+                    </div>
+                    <div className="bg-dark/50 p-3 rounded-xl border border-primary/20 text-center">
+                        <span className="block text-2xl font-bold text-white">120+</span>
+                        <span className="text-xs text-text-muted uppercase tracking-wider">Users</span>
+                    </div>
+                </div>
+
                 <hr className="my-6 border-primary/20" />
                 <p className="mb-3 text-text"><strong>The Challenge:</strong> Fitness studios were managing bookings and payments manually via WhatsApp, leading to double bookings, missed payments, and significant administrative overhead.</p>
                 <p className="mb-6 text-text-muted"><strong>My Role:</strong> Lead developer responsible for full-stack development, from requirements gathering to deployment. Designed the system architecture and implemented all core features.</p>
