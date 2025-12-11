@@ -293,17 +293,20 @@ export default function Projects() {
                           
                           <div className="mt-auto flex flex-wrap gap-3">
                               {project.links.map((link, i) => {
-                                  // Button Styling Logic
-                                  const isPrimary = i === 0 || isFeature; 
+                                  // Button Styling Logic: VISUAL HIERARCHY
+                                  // Only the MAIN action (usually "View Project" or the first one) gets the gradient.
+                                  // "More Details" should always be subtle (ghost/outline), even on Feature cards.
+                                  const isPrimaryAction = i === 0 && !link.modalBtn; 
+                                  
                                   const baseBtn = "px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 flex-1 flex items-center justify-center uppercase tracking-wider min-w-[120px]";
-                                  const primaryBtn = "bg-gradient-to-r from-primary to-secondary text-white hover:shadow-[0_0_15px_rgba(var(--primary),0.5)] hover:scale-[1.02] border border-transparent";
-                                  const secondaryBtn = "bg-white/5 border border-white/10 text-text hover:bg-white/10 hover:border-white/20 hover:text-white";
+                                  const primaryBtn = "bg-gradient-to-r from-primary to-secondary text-white hover:shadow-[0_0_15px_rgba(var(--primary),0.5)] hover:scale-[1.05] border border-transparent shadow-md";
+                                  const secondaryBtn = "bg-white/5 border border-white/20 text-text/80 hover:bg-white/10 hover:border-white/40 hover:text-white backdrop-blur-sm";
 
                                   return link.modalBtn ? (
                                       <button 
                                         key={i} 
                                         onClick={() => setActiveModal(project.id)}
-                                        className={`${baseBtn} ${isPrimary && isFeature ? primaryBtn : secondaryBtn}`}
+                                        className={`${baseBtn} ${secondaryBtn}`}
                                       >
                                           {link.label}
                                       </button>
