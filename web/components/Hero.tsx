@@ -42,17 +42,45 @@ export default function Hero() {
           <span ref={el}></span>
         </p>
 
-        <div className="bg-dark-light/60 backdrop-blur-md border border-primary/20 rounded-2xl p-8 max-w-3xl mx-auto mb-12 hover:border-primary/50 transition-colors duration-300 shadow-xl relative group">
+        <div className="bg-dark-light/60 backdrop-blur-md border border-primary/20 rounded-2xl p-8 max-w-2xl mx-auto mb-12 hover:border-primary/50 transition-colors duration-300 shadow-xl relative group text-left">
           <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
-          <h3 className="text-2xl font-semibold text-primary mb-4 relative z-10">My Mission</h3>
-          <p className="text-lg italic text-text/90 relative z-10">
-            I transform complex challenges into scalable, AI-powered solutions
-            through technical excellence and proven leadership. My approach
-            combines strategic thinking with hands-on execution, building robust
-            systems that deliver measurable business impact. From concept to
-            deployment, I focus on creating products that solve real-world
-            problems and drive lasting results.
-          </p>
+          
+          <div className="relative z-10">
+            <h3 className="text-3xl font-space-grotesk font-bold text-white mb-4">
+              Hey, I'm <span className="text-primary">Maxi</span>
+            </h3>
+            
+            <p className="text-lg text-text-muted mb-6">
+              I'm a full-stack developer who ships fast.
+            </p>
+
+            <div className="mb-6 p-4 bg-white/5 rounded-xl border-l-4 border-secondary">
+              <p className="text-text italic">
+                <span className="font-bold text-secondary not-italic">My specialty:</span> Building SaaS products from scratch and getting 
+                them to revenue in weeks, not months.
+              </p>
+            </div>
+
+            <p className="font-bold text-white mb-3 uppercase tracking-wider text-xs">Recent projects:</p>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center gap-3">
+                 <span className="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+                 <span className="text-text">RunaFit: 6 fitness studios, <strong className="text-green-400">$150k MRR</strong></span>
+              </li>
+              <li className="flex items-center gap-3">
+                 <span className="text-xl">🥈</span>
+                 <span className="text-text">NASA Space Apps Challenge (2nd place)</span>
+              </li>
+              <li className="flex items-center gap-3">
+                 <span className="text-xl">🥇</span>
+                 <span className="text-text">Rally LATAM Innovation (1st place)</span>
+              </li>
+            </ul>
+
+            <p className="text-xl font-medium text-white border-t border-white/10 pt-6">
+              I don't just code — <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold">I solve business problems.</span>
+            </p>
+          </div>
         </div>
 
         <Link 
