@@ -37,15 +37,21 @@ export default function Hero() {
             <p className="font-bold text-white mb-3 uppercase tracking-wider text-xs opacity-80">Recent Highlights:</p>
             <ul className="space-y-3 mb-6">
               <li className="flex items-center gap-3">
-                 <span className="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse"></span>
+                 <div className="w-8 flex-shrink-0 flex justify-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse"></span>
+                 </div>
                  <span className="text-text">RunaFit: Production Deployment, <strong className="text-green-400">Managing 500+ bookings/mo</strong></span>
               </li>
               <li className="flex items-center gap-3">
-                 <span className="text-xl">🥈</span>
+                 <div className="w-8 flex-shrink-0 flex justify-center">
+                    <span className="text-xl">🥈</span>
+                 </div>
                  <span className="text-text">NASA Space Apps Challenge <span className="text-sm text-text-muted">(2nd place)</span></span>
               </li>
               <li className="flex items-center gap-3">
-                 <span className="text-xl">🥇</span>
+                 <div className="w-8 flex-shrink-0 flex justify-center">
+                    <span className="text-xl">🥇</span>
+                 </div>
                  <span className="text-text">Rally LATAM Innovation <span className="text-sm text-text-muted">(1st place)</span></span>
               </li>
             </ul>
