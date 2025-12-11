@@ -38,7 +38,7 @@ export default function Hero() {
             <ul className="space-y-3 mb-6">
               <li className="flex items-center gap-3">
                  <span className="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse"></span>
-                 <span className="text-text">RunaFit: 6 fitness studios, <strong className="text-green-400">500+ bookings/mo</strong></span>
+                 <span className="text-text">RunaFit: Production Deployment, <strong className="text-green-400">Managing 500+ bookings/mo</strong></span>
               </li>
               <li className="flex items-center gap-3">
                  <span className="text-xl">🥈</span>

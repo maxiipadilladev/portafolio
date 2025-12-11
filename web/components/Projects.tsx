@@ -170,8 +170,8 @@ export default function Projects() {
                 <div className="grid grid-cols-3 gap-2 mb-6">
                     <div className="grid grid-cols-3 gap-4 my-6 p-4 bg-white/5 rounded-xl border border-white/10">
         <div className="text-center">
-          <p className="text-2xl font-bold text-primary">6</p>
-          <p className="text-xs text-text-muted uppercase tracking-wider">Clients</p>
+          <p className="text-2xl font-bold text-primary">Live</p>
+          <p className="text-xs text-text-muted uppercase tracking-wider">Status</p>
         </div>
         <div className="text-center border-l border-white/10">
           <p className="text-2xl font-bold text-green-400">500+</p>
