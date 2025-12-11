@@ -168,18 +168,20 @@ export default function Projects() {
         fullDesc: (
             <>
                 <div className="grid grid-cols-3 gap-2 mb-6">
-                    <div className="bg-dark/50 p-3 rounded-xl border border-primary/20 text-center">
-                        <span className="block text-2xl font-bold text-white">6</span>
-                        <span className="text-xs text-text-muted uppercase tracking-wider">Clients</span>
-                    </div>
-                    <div className="bg-dark/50 p-3 rounded-xl border border-primary/20 text-center">
-                        <span className="block text-2xl font-bold text-green-400">$150k</span>
-                        <span className="text-xs text-text-muted uppercase tracking-wider">MRR</span>
-                    </div>
-                    <div className="bg-dark/50 p-3 rounded-xl border border-primary/20 text-center">
-                        <span className="block text-2xl font-bold text-white">120+</span>
-                        <span className="text-xs text-text-muted uppercase tracking-wider">Users</span>
-                    </div>
+                    <div className="grid grid-cols-3 gap-4 my-6 p-4 bg-white/5 rounded-xl border border-white/10">
+        <div className="text-center">
+          <p className="text-2xl font-bold text-primary">6</p>
+          <p className="text-xs text-text-muted uppercase tracking-wider">Clients</p>
+        </div>
+        <div className="text-center border-l border-white/10">
+          <p className="text-2xl font-bold text-green-400">500+</p>
+          <p className="text-xs text-text-muted uppercase tracking-wider">Bookings/mo</p>
+        </div>
+        <div className="text-center border-l border-white/10">
+          <p className="text-2xl font-bold text-secondary">120+</p>
+          <p className="text-xs text-text-muted uppercase tracking-wider">Users</p>
+        </div>
+      </div>
                 </div>
 
                 <hr className="my-6 border-primary/20" />
