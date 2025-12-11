@@ -12,7 +12,7 @@ export default function Footer() {
         
         <div className="flex justify-center space-x-6">
           <a 
-            href="https://github.com/maxiipadi" 
+            href="https://github.com/maxiipadilladev" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-text hover:text-primary transition-all hover:-translate-y-1 text-2xl"
@@ -20,7 +20,7 @@ export default function Footer() {
             <i className="bi bi-github"></i>
           </a>
           <a 
-            href="https://www.linkedin.com/in/maximiliano-padilla-1847a2347/" 
+            href="https://www.linkedin.com/in/maxiipadilladev/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-text hover:text-primary transition-all hover:-translate-y-1 text-2xl"
@@ -36,7 +36,7 @@ export default function Footer() {
             <i className="bi bi-facebook"></i>
           </a>
           <a 
-            href="mailto:mpadillatecnico@gmail.com" 
+            href="mailto:maxiipadilladev@gmail.com" 
             className="text-text hover:text-primary transition-all hover:-translate-y-1 text-2xl"
           >
             <i className="bi bi-envelope-fill"></i>
