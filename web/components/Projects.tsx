@@ -271,7 +271,7 @@ export default function Projects() {
                       </div>
                       
                       <div className={`relative z-10 p-6 flex flex-col flex-grow ${isFeature ? 'justify-end h-full' : ''}`}>
-                          <h5 className={`font-bold text-text mb-3 leading-tight ${isFeature ? 'text-3xl font-space-grotesk drop-shadow-md' : 'text-xl'}`}>
+                          <h5 className={`font-bold text-text mb-3 leading-tight ${isFeature ? 'text-3xl font-space-grotesk' : 'text-xl'}`}>
                             {project.title}
                           </h5>
                           <p className="text-text-muted text-sm leading-relaxed mb-6 line-clamp-3">
