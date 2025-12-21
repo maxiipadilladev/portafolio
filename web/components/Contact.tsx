@@ -65,15 +65,21 @@ export default function Contact() {
           Let's Build Something Great
           <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
         </h2>
+        <p className="text-lg text-text-muted/90 text-center mb-2">
+          Construyamos Algo Grandioso
+        </p>
         
         <p className="text-text-muted text-center mb-4 max-w-2xl mx-auto text-lg">
           Ready to launch your SaaS?
+        </p>
+        <p className="text-text-muted/80 text-center mb-6 max-w-2xl mx-auto italic">
+          ¿Listo para lanzar tu SaaS?
         </p>
 
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            Currently accepting 2 new projects in Q1 2025
+            Actualmente aceptando 2 nuevos proyectos en Q1 2025
           </div>
         </div>
 
@@ -82,12 +88,18 @@ export default function Contact() {
             {/* Left Column - Main CTA */}
             <div className="bg-gradient-to-br from-primary/10 via-secondary/5 to-transparent rounded-3xl p-1 shadow-2xl">
               <div className="bg-dark-light/95 backdrop-blur-xl rounded-3xl p-8 h-full flex flex-col justify-center">
-                <h3 className="text-3xl font-space-grotesk font-bold text-white mb-4">
+                <h3 className="text-3xl font-space-grotesk font-bold text-white mb-2">
                   Quick Response Guarantee
                 </h3>
+                <p className="text-base text-text-muted/80 mb-4 italic">
+                  Garantía de Respuesta Rápida
+                </p>
                 
                 <p className="text-text-muted text-lg mb-6 leading-relaxed">
                   Message me on WhatsApp and I'll respond within <strong className="text-primary">4 hours</strong> (Mon-Fri, 9am-6pm ART).
+                </p>
+                <p className="text-text-muted/80 text-sm mb-6 italic">
+                  Envíame un mensaje por WhatsApp y responderé en menos de 4 horas (lun-vie, 9am-6pm ART).
                 </p>
 
                 <div className="space-y-4 mb-8">
@@ -123,7 +135,7 @@ export default function Contact() {
                 </div>
 
                 <a 
-                  href="https://wa.me/5493854834250?text=Hi%20Maxi!%20I'm%20interested%20in%20discussing%20a%20SaaS%20project.%20Here's%20what%20I%20need:%0A%0AProject:%20[brief%20description]%0ABudget:%20[range]%0ATimeline:%20[when%20you%20need%20it]" 
+                  href="https://wa.me/5493854834250?text=Hola%20Maxi!%20Me%20interesa%20discutir%20un%20proyecto%20SaaS.%20%0A%0AProyecto:%20[breve%20descripción]%0APresupuesto:%20[rango]%0ATimeline:%20[cuándo%20lo%20necesitas]" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative inline-flex items-center justify-center gap-3 px-8 py-5 bg-[#25D366] text-white font-bold text-lg rounded-2xl hover:bg-[#20bd5a] transition-all duration-300 shadow-lg hover:shadow-green-500/30 hover:scale-105 w-full"
@@ -131,7 +143,7 @@ export default function Contact() {
                   <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                   </svg>
-                  <span>Chat on WhatsApp</span>
+                  <span>Chatear por WhatsApp</span>
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -179,7 +191,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <a 
-                    href="https://linkedin.com/in/maxiipadilla" 
+                    href="https://linkedin.com/in/maxiipadilladev" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center px-6 py-3 border-2 border-accent/30 text-accent hover:bg-accent/10 font-bold rounded-xl transition-all duration-300 hover:border-accent/60"
@@ -204,7 +216,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <a 
-                    href="https://github.com/maxiipadi" 
+                    href="https://github.com/maxiipadilladev" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center px-6 py-3 border-2 border-white/20 text-white hover:bg-white/5 font-bold rounded-xl transition-all duration-300 hover:border-white/40"
