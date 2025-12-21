@@ -208,66 +208,6 @@ export default function Projects() {
         modalLinks: [
             { label: "View Code on GitHub", url: "https://github.com/sss2611/REGroup", btnClass: "bg-gradient-to-r from-primary to-secondary text-white hover:shadow-[0_0_15px_rgba(var(--primary),0.5)] border border-transparent" }
         ]
-    },
-    {
-        id: "runafit",
-        title: "RunaFit",
-        img: "/img/runafit.png",
-        shortDesc: "SaaS booking and payment platform for fitness studios. Automated WhatsApp notifications, Mercado Pago integration, and equipment assignment. Increased occupancy by 25%.",
-        subtitle: "RunaFit - Fitness Booking Platform",
-        desc: "Complete booking and payment management system for Pilates and fitness studios, designed for accessibility and automation.",
-        fullDesc: (
-            <>
-                <div className="grid grid-cols-3 gap-2 mb-6">
-                    <div className="grid grid-cols-3 gap-4 my-6 p-4 bg-white/5 rounded-xl border border-white/10">
-        <div className="text-center">
-          <p className="text-2xl font-bold text-primary">Live</p>
-          <p className="text-xs text-text-muted uppercase tracking-wider">Status</p>
-        </div>
-        <div className="text-center border-l border-white/10">
-          <p className="text-2xl font-bold text-green-400">500+</p>
-          <p className="text-xs text-text-muted uppercase tracking-wider">Bookings/mo</p>
-        </div>
-        <div className="text-center border-l border-white/10">
-          <p className="text-2xl font-bold text-secondary">120+</p>
-          <p className="text-xs text-text-muted uppercase tracking-wider">Users</p>
-        </div>
-      </div>
-                </div>
-
-                <hr className="my-6 border-primary/20" />
-                <p className="mb-3 text-text"><strong>The Challenge:</strong> Fitness studios were managing bookings and payments manually via WhatsApp, leading to double bookings, missed payments, and significant administrative overhead.</p>
-                <p className="mb-6 text-text-muted"><strong>My Role:</strong> Lead developer responsible for full-stack development, from requirements gathering to deployment. Designed the system architecture and implemented all core features.</p>
-
-                <p className="font-bold mb-3 text-primary/90 uppercase tracking-widest text-xs">Technologies Used</p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">React</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20">Node.js</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Supabase</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-teal-500/10 text-teal-400 border border-teal-500/20">WhatsApp API</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">Mercado Pago</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-sky-500/10 text-sky-400 border border-sky-500/20">Tailwind CSS</span>
-                </div>
-
-                <p className="font-bold mb-3 text-primary/90 uppercase tracking-widest text-xs">Key Features:</p>
-                <ul className="list-disc list-inside mb-6 text-text-muted space-y-1">
-                     <li>Real-time booking system with equipment assignment</li>
-                     <li>Automated payment reminders via WhatsApp</li>
-                     <li>Integrated payment processing with Mercado Pago</li>
-                     <li>Mobile-first responsive design for clients 40-60+</li>
-                     <li>Admin dashboard with analytics and reporting</li>
-                </ul>
-
-                <p className="text-text-muted leading-relaxed"><strong>The Impact:</strong> Automated 100% of manual booking and payment processes, improved occupancy rate by 25%, and eliminated payment tracking errors. Currently in production with active clients.</p>
-            </>
-        ),
-        links: [
-            { label: "View Project", url: "https://runafit.vercel.app/" },
-            { label: "More Details", modalBtn: true }
-        ],
-        modalLinks: [
-             { label: "View Project", url: "https://runafit.vercel.app/", btnClass: "bg-gradient-to-r from-primary to-secondary text-white hover:shadow-[0_0_15px_rgba(var(--primary),0.5)] border border-transparent" }
-        ]
     }
   ];
 
@@ -391,7 +331,8 @@ export default function Projects() {
                             alt={project.title}
                             width={400}
                             height={256}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            className="transition-transform duration-700 group-hover:scale-110" 
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
                       </div>
