@@ -16,8 +16,13 @@ export default function GoogleAnalytics({ measurementId }: GoogleAnalyticsProps)
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
+          
+          // Log for debugging
+          console.log('Google Analytics initialized:', '${measurementId}');
+          
           gtag('config', '${measurementId}', {
             page_path: window.location.pathname,
+            debug_mode: ${process.env.NODE_ENV === 'development'}
           });
         `}
       </Script>
