@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import Hero from '@/components/Hero';
 import StatsBar from '@/components/StatsBar';
 import About from '@/components/About';
+import HowIWork from '@/components/HowIWork';
 import Teams from '@/components/Teams';
 import Projects from '@/components/Projects';
 import Testimonials from '@/components/Testimonials';
@@ -29,6 +30,7 @@ export default function Home() {
       <Hero />
       <StatsBar />
       <About />
+      <HowIWork />
       <Teams />
       <Projects />
       <Testimonials />

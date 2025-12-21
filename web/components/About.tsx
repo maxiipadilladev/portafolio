@@ -39,7 +39,7 @@ export default function About() {
           <div className="w-full lg:w-1/3 flex justify-center aos-init aos-animate" data-aos="fade-right">
             <div className="relative w-64 h-64 md:w-80 md:h-80 group">
               <Image 
-                src="/img/perfil.jpg" 
+                src="/img/perfil.png" 
                 alt="Profile of Maximiliano Padilla" 
                 width={320}
                 height={320}
@@ -56,38 +56,53 @@ export default function About() {
               <span className="absolute -bottom-2 left-0 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full lg:left-0 left-1/2 lg:translate-x-0 -translate-x-1/2"></span>
             </h2>
             
-            <div className="space-y-4 text-text-muted text-lg">
-              <p>
-                I'm a full-stack developer with a passion for building scalable
-                applications that combine modern web technologies with AI integration.
-                My comprehensive background spans both software and hardware, enabling
-                me to design end-to-end solutions that address complex technical challenges.
+            <div className="space-y-6 text-text-muted text-lg">
+              <p className="text-xl text-text leading-relaxed">
+                I'm a <strong className="text-white">full-stack developer</strong> who specializes in building 
+                <strong className="text-primary"> SaaS products that generate revenue</strong>, not just code that looks good on GitHub.
               </p>
-              <p>
-                My commitment to delivering high-impact projects was recognized with
-                <strong className="text-primary"> 1st Place for Social Impact</strong> at
-                the Latin American Innovation Rally 2025, where I led the "Alerta Tierra" team.
+              
+              <p className="leading-relaxed">
+                My approach: <span className="text-text">identify the core problem → build the MVP fast → validate with real users → scale.</span> That's how RunaFit went from idea to <strong className="text-green-400">500+ bookings/month</strong> in production.
               </p>
-              <p>
-                Subsequently, leading the "LEGION ALFA" project, we achieved
-                <strong className="text-secondary"> 2nd Place Nationally</strong> at NASA
-                Space Apps Challenge 2025, a demanding competition that required extreme
-                resilience and culminated in recognition in San Juan.
-              </p>
-              <p>
-                These achievements demonstrate my ability to combine technical expertise
-                with strategic leadership, transforming innovative concepts into tangible
-                solutions and lasting impact.
+
+              {/* Achievement Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                <div className="p-4 bg-primary/10 border border-primary/20 rounded-xl hover:bg-primary/20 transition-colors">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-3xl">🥇</span>
+                    <div>
+                      <p className="font-bold text-primary text-sm">1st Place</p>
+                      <p className="text-xs text-text-muted">Rally LATAM 2025</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-text-muted">Led "Alerta Tierra" team to win Social Impact category</p>
+                </div>
+
+                <div className="p-4 bg-secondary/10 border border-secondary/20 rounded-xl hover:bg-secondary/20 transition-colors">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-3xl">🥈</span>
+                    <div>
+                      <p className="font-bold text-secondary text-sm">2nd Place</p>
+                      <p className="text-xs text-text-muted">NASA Space Apps 2025</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-text-muted">LEGION ALFA: 89% waste recovery system for Mars missions</p>
+                </div>
+              </div>
+
+              <p className="text-text-muted italic border-l-4 border-primary/50 pl-4 py-2">
+                "I don't just code — I solve business problems with measurable impact."
               </p>
             </div>
 
             <div className="mt-8">
-              <h3 className="text-2xl font-light mb-4">Technical Skills</h3>
-              <div className="flex flex-wrap gap-3">
+              <h3 className="text-xl font-bold mb-4 text-text">Tech Stack</h3>
+              <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
                   <span 
                     key={skill.name}
-                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-transform hover:-translate-y-1 shadow-sm ${getBadgeStyle(skill.type)}`}
+                    className={`px-3 py-1 rounded-full text-xs font-semibold transition-transform hover:-translate-y-1 shadow-sm ${getBadgeStyle(skill.type)}`}
                   >
                     {skill.name}
                   </span>
