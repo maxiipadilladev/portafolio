@@ -13,8 +13,45 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Maximiliano Padilla | RunaTech Dev",
-  description: "Portfolio of Maximiliano Padilla, software developer and innovation team leader.",
+  title: "Maximiliano Padilla - Full-Stack Developer | SaaS Products & AI Integration",
+  description: "Full-stack developer specializing in SaaS products from scratch to revenue. RunaFit: 500+ bookings/month, +25% occupancy. 2nd Place NASA Space Apps. Available for projects.",
+  keywords: ["Full-stack developer", "SaaS developer", "Next.js", "React", "Supabase", "AI integration", "RunaFit", "NASA Space Apps", "Web development"],
+  authors: [{ name: "Maximiliano Padilla" }],
+  creator: "Maximiliano Padilla",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://maxiipadi.dev",
+    title: "Maximiliano Padilla - Full-Stack Developer | SaaS Products",
+    description: "Building SaaS products from scratch to revenue in weeks. RunaFit: 500+ bookings/month. 2nd Place NASA Space Apps Challenge.",
+    siteName: "Maximiliano Padilla Portfolio",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Maximiliano Padilla - Full-Stack Developer Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Maximiliano Padilla - Full-Stack Developer",
+    description: "Building SaaS products from scratch to revenue in weeks",
+    images: ["/og-image.jpg"],
+    creator: "@maxiipadi",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import GlassCard from "./ui/GlassCard";
 
 export default function Teams() {
@@ -34,7 +35,13 @@ export default function Teams() {
           {teams.map((team, index) => (
             <GlassCard key={index} className="hover:border-primary">
               <div className="relative h-48 overflow-hidden">
-                <img src={team.img} alt={team.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+                <Image 
+                  src={team.img} 
+                  alt={team.title} 
+                  width={400}
+                  height={192}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
               </div>
               <div className="p-6 flex flex-col flex-grow">

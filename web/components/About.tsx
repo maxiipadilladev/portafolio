@@ -1,4 +1,6 @@
+"use client";
 
+import Image from 'next/image';
 
 export default function About() {
   const skills = [
@@ -36,9 +38,12 @@ export default function About() {
           {/* Profile Image */}
           <div className="w-full lg:w-1/3 flex justify-center aos-init aos-animate" data-aos="fade-right">
             <div className="relative w-64 h-64 md:w-80 md:h-80 group">
-              <img 
+              <Image 
                 src="/img/perfil.jpg" 
                 alt="Profile of Maximiliano Padilla" 
+                width={320}
+                height={320}
+                priority
                 className="w-full h-full object-cover rounded-full border-4 border-primary shadow-[0_20px_60px_rgba(99,102,241,0.4)] transition-transform duration-500 group-hover:scale-105 group-hover:rotate-3"
               />
             </div>

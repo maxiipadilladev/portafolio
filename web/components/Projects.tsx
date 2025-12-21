@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import GlassCard from "./ui/GlassCard";
 import Modal from "./ui/Modal";
+import ProjectDemo from "./ui/ProjectDemo";
 
 interface Project {
   id: string;
@@ -24,6 +26,55 @@ export default function Projects() {
   const [activeModal, setActiveModal] = useState<string | null>(null);
 
   const projects: Project[] = [
+    {
+      id: "runafit",
+      title: "RunaFit - Live SaaS Product",
+      img: "/img/runafit.png",
+      shortDesc: "SaaS booking and payment platform for fitness studios. Managing 500+ bookings/month, automated WhatsApp notifications, Mercado Pago integration. Increased occupancy by 25%.",
+      subtitle: "RunaFit - Fitness Booking Platform",
+      desc: "Complete booking and payment management system for Pilates and fitness studios, designed for accessibility and automation.",
+      fullDesc: (
+        <>
+            <div className="grid grid-cols-3 gap-4 my-6 p-4 bg-white/5 rounded-xl border border-white/10">
+              <div className="text-center">
+                <p className="text-2xl font-bold text-primary">Live</p>
+                <p className="text-xs text-text-muted uppercase tracking-wider">Status</p>
+              </div>
+              <div className="text-center border-l border-white/10">
+                <p className="text-2xl font-bold text-green-400">500+</p>
+                <p className="text-xs text-text-muted uppercase tracking-wider">Bookings/mo</p>
+              </div>
+              <div className="text-center border-l border-white/10">
+                <p className="text-2xl font-bold text-secondary">120+</p>
+                <p className="text-xs text-text-muted uppercase tracking-wider">Users</p>
+              </div>
+            </div>
+
+            <hr className="my-6 border-primary/20" />
+            <p className="mb-3 text-text"><strong>The Challenge:</strong> Fitness studios were managing bookings and payments manually via WhatsApp, leading to double bookings, missed payments, and significant administrative overhead.</p>
+            <p className="mb-6 text-text-muted"><strong>My Role:</strong> Lead developer responsible for full-stack development, from requirements gathering to deployment. Designed the system architecture and implemented all core features.</p>
+
+            <p className="font-bold mb-3 text-primary/90 uppercase tracking-widest text-xs">Technologies Used</p>
+            <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">React</span>
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20">Node.js</span>
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Supabase</span>
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-teal-500/10 text-teal-400 border border-teal-500/20">WhatsApp API</span>
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">Mercado Pago</span>
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-sky-500/10 text-sky-400 border border-sky-500/20">Tailwind CSS</span>
+            </div>
+
+            <p className="text-text-muted leading-relaxed"><strong>The Impact:</strong> Reduced manual administrative tasks by 80%, eliminated double bookings, automated payment confirmations, and increased studio occupancy by 25% through better scheduling visibility.</p>
+        </>
+      ),
+      links: [
+        { label: "View Live Demo", url: "https://runafit.com" },
+        { label: "More Details", modalBtn: true }
+      ],
+      modalLinks: [
+        { label: "View Live Platform", url: "https://runafit.com", btnClass: "bg-gradient-to-r from-primary to-secondary text-white hover:shadow-[0_0_15px_rgba(var(--primary),0.5)] border border-transparent" }
+      ]
+    },
     {
       id: "legion",
       title: "LEGION ALFA (2nd Place NASA)",
@@ -230,48 +281,123 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 relative">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-space-grotesk font-bold mb-12 text-center relative aos-init aos-animate" data-aos="fade-up">
-          My Projects
+        <h2 className="text-4xl font-space-grotesk font-bold mb-4 text-center relative aos-init aos-animate" data-aos="fade-up">
+          Featured Work
           <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
         </h2>
+        <p className="text-text-muted text-center mb-16 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          From SaaS products in production to award-winning innovations
+        </p>
+
+        {/* FEATURED PROJECT - RunaFit */}
+        <div className="mb-20" data-aos="fade-up">
+          <div className="relative bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 rounded-3xl p-1 shadow-2xl">
+            <div className="bg-dark-light/95 backdrop-blur-xl rounded-3xl overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
+                {/* Left Column - Content */}
+                <div className="flex flex-col justify-center">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium">
+                      <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                      Live Product
+                    </span>
+                    <span className="text-sm text-text-muted">In Production</span>
+                  </div>
+
+                  <h3 className="text-4xl lg:text-5xl font-space-grotesk font-bold text-white mb-4">
+                    {projects[0].title}
+                  </h3>
+                  
+                  <p className="text-xl text-text-muted mb-8 leading-relaxed">
+                    Complete booking and payment platform for fitness studios. Automated workflows that increased client occupancy by 25%.
+                  </p>
+
+                  {/* Stats Grid */}
+                  <div className="grid grid-cols-3 gap-4 mb-8 p-6 bg-white/5 rounded-xl border border-white/10">
+                    <div className="text-center">
+                      <p className="text-3xl font-bold text-primary">500+</p>
+                      <p className="text-xs text-text-muted uppercase tracking-wider">Bookings/mo</p>
+                    </div>
+                    <div className="text-center border-l border-white/10">
+                      <p className="text-3xl font-bold text-green-400">+25%</p>
+                      <p className="text-xs text-text-muted uppercase tracking-wider">Occupancy</p>
+                    </div>
+                    <div className="text-center border-l border-white/10">
+                      <p className="text-3xl font-bold text-secondary">120+</p>
+                      <p className="text-xs text-text-muted uppercase tracking-wider">Users</p>
+                    </div>
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div className="mb-8">
+                    <p className="text-sm text-text-muted uppercase tracking-wider mb-3">Tech Stack</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Next.js</span>
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20">Node.js</span>
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Supabase</span>
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-teal-500/10 text-teal-400 border border-teal-500/20">WhatsApp API</span>
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">Mercado Pago</span>
+                    </div>
+                  </div>
+
+                  {/* CTAs */}
+                  <div className="flex flex-wrap gap-4">
+                    <a 
+                      href={projects[0].links[0].url} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full hover:shadow-[0_0_20px_rgba(99,102,241,0.6)] transition-all duration-300 hover:scale-105"
+                    >
+                      View Live Demo →
+                    </a>
+                    <button 
+                      onClick={() => setActiveModal(projects[0].id)}
+                      className="px-6 py-3 border border-white/20 text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300"
+                    >
+                      Case Study
+                    </button>
+                  </div>
+                </div>
+
+                {/* Right Column - Visual/Video */}
+                <div className="flex items-center justify-center lg:justify-end">
+                  <ProjectDemo 
+                    imageSrc={projects[0].img}
+                    videoSrc="/videos/runafit-demo.mp4" // Will show play button when video exists
+                    altText="RunaFit Dashboard Demo"
+                    projectTitle={projects[0].title}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* OTHER PROJECTS */}
+        <h3 className="text-3xl font-space-grotesk font-bold mb-8 text-center" data-aos="fade-up">
+          Competition Wins & Open Source
+        </h3>
         
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[minmax(320px,auto)]">
-          {projects.map((project, index) => {
-            // Bento Grid Logic
-            // First item (Winner NASA): Large Square (2x2)
-            // Second item (Winner Rally): Vertical Tall (1x2)
-            // Third item: Horizontal Wide (2x1) 
-            // Others: Standard (1x1)
-            let bentoClass = "md:col-span-1 md:row-span-1";
-            
-            // Layout Configuration
-            if (index === 0 || index === 1) {
-                // Top Winners: Big 2x2 Squares
-                bentoClass = "md:col-span-2 md:row-span-2";
-            } else if (index === 2 || index === 5) {
-                // Important Projects: Wide 2x1
-                bentoClass = "md:col-span-2 md:row-span-1";
-            }
-            
-            const isFeature = index === 0 || index === 1;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.slice(1).map((project, index) => {
+            const actualIndex = index + 1; // Adjust for slice
 
             return (
-              <div key={project.id} className={`${bentoClass} group`} data-aos="fade-up" data-aos-delay={index * 50}>
+              <div key={project.id} className="group" data-aos="fade-up" data-aos-delay={index * 50}>
                   <GlassCard className="h-full hover:border-primary/50 transition-colors duration-500 relative overflow-hidden flex flex-col">
-                      <div className={`relative w-full ${isFeature ? 'h-full absolute inset-0' : 'h-64'} ${isFeature ? 'z-0' : ''}`}>
-                          <img 
+                      <div className="relative w-full h-64">
+                          <Image 
                             src={project.img} 
-                            alt={project.title} 
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-100" 
+                            alt={project.title}
+                            width={400}
+                            height={256}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                           />
-                          {/* Gradient only for Feature cards: Lighter touch, mostly at bottom for text readability */}
-                          {isFeature && (
-                              <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
-                          )}
+                          <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
                       </div>
                       
-                      <div className={`relative z-10 p-6 flex flex-col flex-grow ${isFeature ? 'justify-end h-full' : ''}`}>
-                          <h5 className={`font-bold text-text mb-3 leading-tight ${isFeature ? 'text-3xl font-space-grotesk' : 'text-xl'}`}>
+                      <div className="relative z-10 p-6 flex flex-col flex-grow">
+                          <h5 className="text-xl font-bold text-text mb-3 leading-tight">
                             {project.title}
                           </h5>
                           <p className="text-text-muted text-sm leading-relaxed mb-6 line-clamp-3">
@@ -280,9 +406,6 @@ export default function Projects() {
                           
                           <div className="mt-auto flex flex-wrap gap-3">
                               {project.links.map((link, i) => {
-                                  // Button Styling Logic: VISUAL HIERARCHY
-                                  // Only the MAIN action (usually "View Project" or the first one) gets the gradient.
-                                  // "More Details" should always be subtle (ghost/outline), even on Feature cards.
                                   const isPrimaryAction = i === 0 && !link.modalBtn; 
                                   
                                   const baseBtn = "px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 flex-1 flex items-center justify-center uppercase tracking-wider min-w-[120px]";
@@ -301,7 +424,8 @@ export default function Projects() {
                                       <a 
                                           key={i} 
                                           href={link.url} 
-                                          target="_blank" 
+                                          target="_blank"
+                                          rel="noopener noreferrer" 
                                           className={`${baseBtn} ${primaryBtn}`}
                                       >
                                           {link.label}

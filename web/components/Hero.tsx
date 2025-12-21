@@ -10,6 +10,14 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15)_0%,transparent_50%)] animate-pulse-slow pointer-events-none"></div>
 
       <div className="container mx-auto px-4 z-10 text-center">
+        {/* Available Badge */}
+        <div className="mb-6 animate-fadeInUp">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            Available for SaaS Projects
+          </span>
+        </div>
+        
         <h1 className="font-space-grotesk text-4xl md:text-6xl lg:text-7xl font-black mb-12 text-white tracking-tight">
           Maximiliano Padilla
         </h1>
@@ -63,19 +71,20 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fadeInUp">
+          <a 
+            href="https://wa.me/5493854834250?text=Hi%20Maxi!%20I'm%20interested%20in%20discussing%20a%20SaaS%20project" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full hover:shadow-[0_0_20px_rgba(99,102,241,0.6)] transition-all duration-300 w-full sm:w-auto hover:scale-105 shadow-lg"
+          >
+            📅 Book Free Consultation
+          </a>
           <Link 
             href="#projects" 
-            className="px-8 py-4 bg-white text-dark font-bold rounded-full hover:bg-gray-100 transition-all duration-300 w-full sm:w-auto"
-          >
-            View Projects ↓
-          </Link>
-          <a 
-            href="/cv.pdf" 
-            target="_blank"
             className="px-8 py-4 border border-white/20 text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300 w-full sm:w-auto"
           >
-            Download CV
-          </a>
+            See RunaFit Case Study ↓
+          </Link>
         </div>
       </div>
     </section>

@@ -5,9 +5,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Hero from '@/components/Hero';
+import StatsBar from '@/components/StatsBar';
 import About from '@/components/About';
 import Teams from '@/components/Teams';
 import Projects from '@/components/Projects';
+import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 
 export default function Home() {
@@ -25,9 +27,11 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <StatsBar />
       <About />
       <Teams />
       <Projects />
+      <Testimonials />
       <Contact />
     </>
   );
